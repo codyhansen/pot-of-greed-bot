@@ -14,6 +14,8 @@ client = discord.Client(intents=intents)
 
 users = []
 
+test_player = Player("Cody", [], [], 53)
+
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}. Preparing user file...')
@@ -26,6 +28,10 @@ async def on_message(message):
         return
 
     # TODO Draw Card
+    if message.content.startswith('!draw'):
+        card = test_player.draw()
+        print(f"You drew {card.name}!")
+        test_player.hand.append(card)
 
     # TODO Play Card
 

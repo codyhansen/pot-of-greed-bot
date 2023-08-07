@@ -1,7 +1,14 @@
-from dataclasses import dataclass
+from card import *
 
-@dataclass
 class Player:
-    name: str
-    hand: []
-    points: int
+
+    def __init__(self, name, hand, field, points) -> None:
+        self.name = name
+        self.hand = hand
+        self.field = field
+        self.points = points
+
+
+    def draw(self) -> Card:
+        card = random.choice(Card.__subclasses__())
+        return card()

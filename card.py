@@ -7,7 +7,7 @@ class Card:
         self.description = description
         self.flavour_text = flavour_text
 
-    def card_effect() -> None:
+    def card_effect(self) -> None:
         pass
 
 
@@ -25,8 +25,25 @@ class PotOfGreed(Card):
         return cards
     
 
-pig = PotOfGreed()
+class CelticGuardian(Card):
 
-draw = pig.card_effect()
+    def __init__(self) -> None:
+        super().__init__("Celtic Guardian", "Can be played immediately from hand when opponent attacks directly.", "Always supposed to be there.")
+        self.attack = 1400
+        self.defense = 1200
 
-print(draw[1].name)
+
+class JacksKnight(Card):
+
+    def __init__(self) -> None:
+        super().__init__("Jack's Knight", "", "Belongs to some guy named Jack.")
+        self.attack = 1900
+        self.defense = 1000
+
+
+class DarkMagician(Card):
+
+    def __init__(self) -> None:
+        super().__init__("Dark Magician", "", "Spooky wizard man.")
+        self.attack = 2500
+        self.defense = 2100
