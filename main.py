@@ -30,10 +30,19 @@ async def on_message(message):
     # TODO Draw Card
     if message.content.startswith('!draw'):
         card = test_player.draw()
-        print(f"You drew {card.name}!")
         test_player.hand.append(card)
 
+        print(test_player.hand)
+        await message.channel.send(f"You drew {card.name}!")
+
     # TODO Play Card
+    if message.content.startswith('!play'):
+        for card in test_player.hand:
+            if card.name.lower() in message.content.lower():
+                card.card_effect()
+                test_player.hand.remove(card)
+                
+
 
     # TODO Roll Dice
     if message.content.startswith('!rollmydice'):

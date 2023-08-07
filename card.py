@@ -33,17 +33,17 @@ class CelticGuardian(Card):
         self.defense = 1200
 
 
-class JacksKnight(Card):
+# class JacksKnight(Card):
 
-    def __init__(self) -> None:
-        super().__init__("Jack's Knight", "", "Belongs to some guy named Jack.")
-        self.attack = 1900
-        self.defense = 1000
+#     def __init__(self) -> None:
+#         super().__init__("Jack's Knight", "", "Belongs to some guy named Jack.")
+#         self.attack = 1900
+#         self.defense = 1000
 
 
-class DarkMagician(Card):
+# class DarkMagician(Card):
 
-    def __init__(self) -> None:
-        super().__init__("Dark Magician", "", "Spooky wizard man.")
-        self.attack = 2500
-        self.defense = 2100
+#     def __init__(self) -> None:
+#         super().__init__("Dark Magician", "", "Spooky wizard man.")
+#         self.attack = 2500
+#         self.defense = 2100
